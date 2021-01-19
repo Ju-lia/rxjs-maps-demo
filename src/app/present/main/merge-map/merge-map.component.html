@@ -1,0 +1,55 @@
+<a mat-icon-button mat-button href="{{ mapDocs }}">
+  {{ mapDocs }}
+</a>
+<div matExpansionPanelContent>
+  <mat-tab-group>
+    <mat-tab label="Diagram">
+      <ng-template matTabContent>
+        <figure>
+          <img width="700px" src="{{ image }}" alt="map" />
+        </figure>
+      </ng-template>
+    </mat-tab>
+    <mat-tab
+      *ngFor="let example of examples | keyvalue; index as i"
+      label="Example ({{ i + 1 }})"
+    >
+      <ng-template matTabContent>
+        <button mat-button mat-icon-button (click)="example.value()">
+          <mat-icon matTooltip="Run"> play_circle </mat-icon>
+        </button>
+        <pre class="prettyprint">{{ example.key }} </pre>
+      </ng-template>
+    </mat-tab>
+    <mat-tab label="Example (2)">
+      <ng-template matTabContent>
+        <button #mapButton mat-button mat-icon-button>
+          <mat-icon>autorenew</mat-icon>
+        </button>
+        <button mat-button>
+          <img *ngIf="imageUrl1" width="35" src="{{ imageUrl1 }}" alt="" />
+        </button>
+        <pre class="prettyprint">{{ example2 }} </pre>
+      </ng-template>
+    </mat-tab>
+    <mat-tab label="Example (3)">
+      <ng-template matTabContent>
+        <mat-form-field>
+          <mat-label>Search</mat-label>
+          <input
+            matInput
+            [formControl]="searchControl"
+            min="0"
+            max="4999"
+            maxlength="4"
+            type="number"
+          />
+        </mat-form-field>
+        <button mat-button>
+          <img *ngIf="imageUrl2" width="35" src="{{ imageUrl2 }}" alt="" />
+        </button>
+        <pre class="prettyprint">{{ example3 }} </pre>
+      </ng-template>
+    </mat-tab>
+  </mat-tab-group>
+</div>
