@@ -22,15 +22,13 @@
       </ng-template>
     </mat-tab>
     <mat-tab label="Example (2)">
-      <ng-template matTabContent>
-        <button #mapButton mat-button mat-icon-button>
-          <mat-icon>autorenew</mat-icon>
-        </button>
-        <button mat-button>
-          <img *ngIf="imageUrl1" width="35" src="{{ imageUrl1 }}" alt="" />
-        </button>
-        <pre class="prettyprint">{{ example2 }} </pre>
-      </ng-template>
+      <button #mapButton mat-button mat-icon-button>
+        <mat-icon>autorenew</mat-icon>
+      </button>
+      <button mat-button>
+        <img *ngIf="imageUrl1" width="35" src="{{ imageUrl1 }}" alt="" />
+      </button>
+      <pre class="prettyprint">{{ example2 }} </pre>
     </mat-tab>
     <mat-tab label="Example (3)">
       <ng-template matTabContent>
