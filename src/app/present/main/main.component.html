@@ -1,7 +1,7 @@
 <h1>{{ title }}</h1>
 <h2>{{ subTitle }}</h2>
 
-<mat-tab-group>
+<mat-tab-group [@.disabled]="true">
   <mat-tab label="map">
     <app-map></app-map>
   </mat-tab>
