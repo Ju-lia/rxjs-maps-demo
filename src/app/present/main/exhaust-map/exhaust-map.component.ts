@@ -15,12 +15,12 @@ export class ExhaustMapComponent {
   image = '/assets/images/exhaustMap.png';
 
   example1 = `// 1 - 3 - (5|)
-const httpReq = (i: number) => interval(800).pipe(
+const httpReq = (i: number) => interval(1000).pipe(
     map(() => 10 * i),
     tap(x => console.log(\`($\{i}, $\{x})\`)),
     take(3),
   );
-interval(1000).pipe(
+interval(800).pipe(
     map(x => x + 1),
     filter(x => x % 2 === 1),
     take(3),
@@ -30,12 +30,12 @@ interval(1000).pipe(
 
   run1(): void {
     const httpReq = (i: number) =>
-      interval(800).pipe(
+      interval(1000).pipe(
         map(() => 10 * i),
         tap(x => console.log(`(${i}, ${x})`)),
         take(3),
       );
-    interval(1000)
+    interval(800)
       .pipe(
         map(x => x + 1),
         filter(x => x % 2 === 1),
