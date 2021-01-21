@@ -19,7 +19,7 @@ export class MapComponent {
 from([0, 1, 2])
   .pipe(
     tap(console.log),
-    map(x) => 10 + x)
+    map(x => 10 + x)
   )
   .subscribe(output => console.log('=>', output), () => console.error('error'), () => console.log('completed'));`;
 
