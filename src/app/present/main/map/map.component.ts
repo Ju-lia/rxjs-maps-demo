@@ -15,7 +15,7 @@ export class MapComponent {
 
   image = '/assets/images/map.png';
 
-  example1 = `// (1 2 3 |)
+  example1 = `// (0 1 2 |)
 from([0, 1, 2])
   .pipe(
     tap(console.log),
